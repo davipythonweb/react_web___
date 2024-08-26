@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="react.png" type="image/x-icon">
+    <title>Fetch</title>
+</head>
+<body>
+    
+    <h1> Ola mundo</h1>
+    <div class="conteudo"></div>
+    <img src="" alt="">
+
+    <!-- testando requisicao via fetch -api cep-->
+    <form id="buscarCep">
+        <label for="cep">CEP</label>
+        <input type="text" name="cep" id="cep" placeholder="digite o cep...">
+        <input type="button" value="buscar cep" id="btnCep"><br><br>
+        <input type="reset" value="limpar">
+    </form><br>
+    <div class="resultadoCep">
+
+    </div><br>
+
+    <!-- testando requisicao via fetch -api cnpj-->
+    <form id="buscarCNPJ">
+        <label for="cnpj">CNPJ</label>
+        <input type="text" name="cnpj" id="cnpj" placeholder="digite o cnpj...">
+        <input type="button" value="buscar cnpj" id="btnCNPJ"><br><br>
+        <input type="reset" value="limpar">
+    </form><br>
+    <div class="resultadoCNPJ">
+
+    </div>
+
+
+
+    <!-- exercicio da moeda -->
+    <div>
+        <h2>Preço BTC</h2>
+        <p class="btc"></p>
+    </div>
+
+
+    <!-- exercicio piada chucknorris -->
+     <div>
+        <p class="piada"></p>
+        <button class="proxima">proxima</button>
+     </div>
+</body>
+<!-- <script src="main.js"></script> -->
+<!-- <script src="promisse.js"></script> -->
+<!-- <script src="fetch.js"></script> -->
+<script src="exercicio-fetch.js"></script>
+</html>
