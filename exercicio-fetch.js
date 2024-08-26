@@ -114,3 +114,47 @@ function puxarPiada() {
 // adiciona um evento ao botao para quando clickar fazer novas requisiçoes a api e mostrar na tela com o funcao puxar piada
 btnProxima.addEventListener('click', puxarPiada)
 puxarPiada()
+
+
+
+
+// async / await
+// A palavra chave async, indica que a funçao pissui partes
+// assincronas e que pretende esperar a resolução da mesma antes de continuar.
+// o await, irá indicar a (promise) que devemos esperar.
+// Faz parte do ES8
+
+// EXEMPLO
+async function puxarDados() {
+    const dadosResponse = await fetch('./dados.json')
+    const dadosJSON = await dadosResponse.json()
+
+    document.body.innerText = dadosJSON.aula
+}
+
+puxarDados()
+
+// A DIFERENÇA DO then / async
+// Eh por mais uma questão de sintaxe limpa
+
+
+// veja o exemplo da mesma função com o then e o await
+
+// com o .then
+function iniciarFetch() {
+    fetch('./dados.json')
+    .then(dadosResponse => dadosResponse.json())
+    .then(dadosJSON => {
+        document.body.innerText = dadosJSON.titulo
+    })
+}
+iniciarFetch()
+
+// com async await
+async function iniciarFetch() {
+    const dadosResponse = await fetch('./dados.json')
+    const dadosJSON = await dadosResponse.json()
+    document.body.innerText = dadosJSON.titulo
+    }
+
+iniciarFetch()
