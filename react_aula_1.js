@@ -27,3 +27,24 @@
 // const Button = () {
 //     return <Button>Comprar</Button>
 // }
+
+
+// Hooks
+// utilizamos o react pela facilidade de sincronização do estado.
+// Os Hooks são funçoes especiais de React, o useState possibilita a 
+// sincronização do estado.
+
+// exemplo:
+
+const Compras = () => {
+    // useState é um Hook que define uma variavel reativa
+    const [count, setCount] = React.useState(0)
+
+    return (
+        <div>
+            <button onClick={() => setCount(count + 1)}>Comprar:{count}</button>
+            <p>Total: {count}</p>
+            <p>Preço: R$ {count * 250}</p>
+        </div>
+    )
+}
