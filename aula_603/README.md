@@ -1,11 +1,8 @@
-# criando projeto React com a ferramenta de build/bundler e server de development de aplicaçoes Web, Vite
+# React + Vite
 
-* Vite em Françês significa = rápido
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-- node-version==20.17.0
-- npm-version==10.8.2
+Currently, two official plugins are available:
 
-
-- github -cli gh
-`[text](https://cli.github.com/)`
-
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
