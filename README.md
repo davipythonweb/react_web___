@@ -23,3 +23,6 @@ Biblioteca React
 `npm create vite@latest .`
 `npm install`
 `npm run dev`
+
+* gerar arquivos finais para subir no servidor
+`npm run build`
