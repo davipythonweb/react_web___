@@ -5,15 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- Carrega o react e o react-DOM -->
-        <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     
         <!-- Don't use this in production: -->
-        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
     <title>React-aulas</title>
 </head>
 <body>
-    <div id="app-javascript"></div>
+    <div id="app-javascript">
+        <p>---------------Javascript------------------</p>
+        <p>Total: <span id="total"></span></p>
+        <p>Preco: R$ <span id="preco"></span></p>
+        <button id="button">Comprar</button>
+    </div>
+
+    <!-- criando um script com javascript puro -->
+    <script type="application/javascript">
+        const total = document.getElementById('total')
+        const preco = document.getElementById('preco')
+        const button = document.getElementById('button')
+
+        let contador = 1
+
+        // funão para modificar o dom
+        function atualizarValores(contador) {
+            total.innerText = contador
+            preco.innerText = contador * 250
+        }
+
+        // mostrar os valores iniciais
+        atualizarValores(contador)
+
+        // função para pegar o click , incrementando + 1 e chamar a funçao atualizaValores 
+        function handleClick() {
+            contador++
+            atualizarValores(contador)
+        }
+        // adiciona um evento de clicck ao botao e recebe a handleclick
+        button.addEventListener('click', handleClick)
+    </script>
+
+
+
+
+
+    <!-- criando o mesmo script utilizando React -->
+     <div id="app-react"></div>
+
+     <script type="text/babel">
+
+        const Comprar = () => {
+            const [contador, setContador] = React.useState(1)
+
+            return <div>
+                <p>---------------React------------------</p>
+                    <p>Total: {contador}</p>
+                    <p>Preco: R$ {contador * 250}</p>
+                    <button onClick={() => setContador(contador + 1)}>Comprar</button>
+                </div>
+        }
+
+        // raiz do React para renderizar
+        ReactDOM.createRoot(document.getElementById('app-react')).render(<Comprar />)
+     </script>
 </body>
 </html>
