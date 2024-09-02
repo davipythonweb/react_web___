@@ -48,3 +48,5 @@ const Compras = () => {
         </div>
     )
 }
+
+// aula-600 finalizada
