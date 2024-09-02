@@ -2,7 +2,7 @@ import React from "react"
 
 const App = () => {
   return (
-      <div>App React</div>
+      <div>App React <button class="btn btn-outline-primary">Click</button></div>
   )
 }
 
