@@ -1,7 +1,7 @@
-import React from "react"
+// usando arrais
 
-const App = () => {
-  const filmes = [
+
+const filmes = [
     {nome: 'O Homem de Ferro1', ano: 2006},
     {nome: 'O Homem de Ferro2', ano: 2010},
     {nome: 'O Homem de Ferro3', ano: 2014},
@@ -18,5 +18,3 @@ return (
         ))}
         </ul>
     )
-  }
-export default App
