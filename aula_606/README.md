@@ -10,7 +10,7 @@ Currently, two official plugins are available:
 
 ### aula 606
 
-`curso-oridamid`
+* `curso-oridamid`
 
 #### estrutura Minima para projeto com Vite + React
 
