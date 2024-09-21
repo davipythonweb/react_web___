@@ -9,6 +9,7 @@ Currently, two official plugins are available:
 
 
 ### aula 606
+
 #### estrutura Minima para projeto com Vite + React
 
 _____________________________
