@@ -11,15 +11,37 @@ import viteLogo from '/vite.svg'
 
 const App = () => {
   function handleClick(event) {
-    alert('Comprou: ' + event.target.innerText)
+    console.log(event.target)
   }
+  return <button onClick={handleClick} onMouseMove={handleClick}>Clique</button>
 }
 
-return (
-  <div>
-    <button onClick={hadleClick}>Camisa</button>
-    <button onClick={hadleClick}>Bermuda</button>
-  </div>
-  )
-
 export default App
+
+// E possivel executar uma funçao anonima no evento
+
+// Guardar o estado do DOM
+// não eh o mais indicado, veremos como fazer iso com hooks. 
+
+const App = () => {
+  function handleClick(event) {
+    console.log(event.target)
+  }
+  return <button onClick={(event) => console.log(event)}Clique</button>
+}
+
+{/* Eventos no windows/document ou qualquer elemento */}
+{/* fora do React, devem ser adicionados com JavaScript normalmente, */}
+{/* usando o addEventListener */}
+
+{/* Este tipo de evento será */}
+{/* sera adicionando com o hook useEffect */}
+
+const App = () => {
+  function handleScroll(event) {
+    console.log(event)
+  }
+  window.addEventListener('scroll', handleScroll)
+  return <div style={{ height: '200vw'}}>Div</div>
+}
+
