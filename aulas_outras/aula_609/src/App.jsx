@@ -4,15 +4,24 @@ import Footer from './Footer'
 import Form from './Form/Form'
 import viteLogo from '/vite.svg'
 
+const Teste = () => {
+  const active = true
+  if (active) {
+    return <p>Teste</p>
+  } else {
+    return null
+  }
+}
 
 const App = () => {
  
   return (
-    <div>
+    <React.Fragment>
+    <Teste />
       <Header />
       <Form />
       <Footer />
-  </div>
+  </React.Fragment>
   )
 }
 

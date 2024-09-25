@@ -51,3 +51,41 @@ export default App
 // um componente deve sempre retornar algo.
 // o retorno pode ser qualquer tipo de dado
 // aceitado pelo JSX(string,array, um elemento JSX,null e etc).
+
+const teste = () => {
+	const active = true
+	if (active) {
+		return <p>Ativo</p>
+	} else {
+		return null
+	}
+}
+
+
+//React.Fragment
+
+// Um componente deve sempre retornar
+// um elemento unico no return.
+// Caso vice deseje retornar mais de um elemento,
+// envolva os mesmos em uma div ou dentro do:
+// <React.Fragment></React.Fragment> ou <></>
+
+const App = () => {
+	return (
+		<React.Fragment>
+			<Header />
+			<Form />
+			<Footer />
+		</React.Fragment>
+	)
+}
+// ou
+const App = () => {
+	return (
+		<>
+			<Header />
+			<Form />
+			<Footer />
+		</>
+	)
+}
