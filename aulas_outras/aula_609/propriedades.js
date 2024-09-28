@@ -4,6 +4,7 @@
 // Assim como uma funçao pode receber argumentos,
 // podemos tambem passar argumentos aos componentes.
 // Esses sao conhecimentos como propriedades ou props.
+
 import React from 'react'
 
 const Titulo = (props) = {
@@ -17,3 +18,4 @@ const App = () => {
 		</section>
 	)
 }
+export default App
