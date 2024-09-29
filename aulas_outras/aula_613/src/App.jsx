@@ -3,8 +3,11 @@ import React from 'react'
 import viteLogo from '/vite.svg'
 
 
-function App() {
-  return 
-}
+const App = () => {
+  const ativo = true
 
+  return (
+    <button disabled={!ativo}>{ativo ? 'Botao Ativo' : 'Botao Inativo'}</button>
+)
+}
 export default App
