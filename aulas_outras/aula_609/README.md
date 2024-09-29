@@ -11,7 +11,7 @@ Currently, two official plugins are available:
 
 
 
-### aula 609
+### aula 609,610,611
 
 * `curso-oridamid`
 

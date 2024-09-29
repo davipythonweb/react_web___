@@ -62,3 +62,47 @@ const App = () => {
 	)
 }
 export default App
+
+
+// Rest e Spread
+
+// usamos o rest e spread , quando nao sabemos todas as
+// propiedades que um componete pode receber.
+
+import React from 'react'
+
+const Input = ({label, id, ...props}) => {
+	return (
+		<div>
+			<label htmlFor={id}>{label}</label>
+			<input id={id} type="text">{...props} />
+		</div>
+		)
+}
+
+export default Input
+
+
+//Dados
+
+//podemos passar difenrentes tipos de dados e até outros componetes
+// nas propiedades
+
+const App = () => {
+	const logado = true
+	const nome = 'Andre'
+
+	return (
+		<section>
+			<Header logado={logado} nome={nome} />
+		</section>
+		)
+}
+
+const Header = ({logado, nome}) = {
+	if (logado) {
+		return <header>Bem vindo, {nome}</header>
+	} else {
+		return <header>Header</header>
+	}
+}
