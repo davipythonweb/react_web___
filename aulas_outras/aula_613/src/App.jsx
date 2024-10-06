@@ -1,18 +1,17 @@
 import React from 'react'
 import viteLogo from '/vite.svg'
+import ButtonModal from './ButtonModal'
 
 
 const App = () => {
-  const [ativo, setAtivo] = React.useState(false)
-  console.info(ativo)
+  const [modal, setModal] = React.useState(false)
 
-  function handleClick() { 
-    setAtivo(!ativo) 
-  } 
-
-return ( 
-  //usando um verificador ternario, modificando o valor atual utilizando a funcao 
-  <button onClick={handleClick}>{ativo ? 'Botao Ativo' : 'Botao Inativo'}</button> 
+return (
+  <div>
+      <div>{modal ? 'Modal Aberto': 'Modal Fechado'}</div>
+      <ButtonModal setModal={setModal} />  
+  </div> 
+   
   )
 
 }
