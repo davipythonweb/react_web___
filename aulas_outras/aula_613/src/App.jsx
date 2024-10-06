@@ -1,6 +1,7 @@
 import React from 'react'
 import viteLogo from '/vite.svg'
 import ButtonModal from './ButtonModal'
+import Modal from './Modal'
 
 
 const App = () => {
@@ -8,7 +9,7 @@ const App = () => {
 
 return (
   <div>
-      <div>{modal ? 'Modal Aberto': 'Modal Fechado'}</div>
+      <Modal modal={modal} setModal={setModal} />
       <ButtonModal setModal={setModal} />  
   </div> 
    
