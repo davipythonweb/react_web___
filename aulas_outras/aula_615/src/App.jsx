@@ -30,7 +30,7 @@ const App = () => {
 
       {carregando && <p>Carregando...</p>}
 
-      {/* se carregando for falso e verificar  se dados existe, se for verdadeiro, mostrar produto */}
+      {/* se carregando for falso e se dados existe, se for verdadeiro, mostrar produto. */}
       {!carregando && dados && <Produto dados={dados}/>}
     </div>
     )
