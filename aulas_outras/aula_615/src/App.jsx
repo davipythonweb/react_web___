@@ -5,15 +5,23 @@ import Produto from './Produto'
 const App = () => {
   const [dados, setDados] = React.useState(null)
 
-  function handleClick(event) {
-    console.info(event.target.innerText)
+  async function handleClick(event) {
+    const response = await fetch(
+      `https://ranekapi.origamid.dev/json/api/produto/${event.target.
+      innerText}`
+      )
+    const json = await response.json()
+    setDados(json)
+    console.info(json)
   }
+
   return (
     <div>
-    <button class='btn btn-danger' style={{margin: '.5rem'}} onClick={handleClick}>notebook</button>
-    <button class='btn btn-success' style={{margin: '.5rem'}} onClick={handleClick}>smartphone</button>
-    <button class='btn btn-primary' style={{margin: '.5rem'}} onClick={handleClick}>tablet</button>
-      <Produto />
+    <button className='btn btn-danger' style={{margin: '.5rem'}} onClick={handleClick}>notebook</button>
+    <button className='btn btn-success' style={{margin: '.5rem'}} onClick={handleClick}>smartphone</button>
+    <button className='btn btn-primary' style={{margin: '.5rem'}} onClick={handleClick}>tablet</button>
+      {/* verificar  se dados existe, se for verdadeiro, mostrar produto */}
+      {dados && <Produto dados={dados}/>}
     </div>
     )
 }
