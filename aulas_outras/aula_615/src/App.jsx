@@ -2,6 +2,9 @@ import React from 'react'
 import viteLogo from '/vite.svg'
 import Produto from './Produto'
 
+
+// Usando useState para fazer um fetch
+
 const App = () => {
   const [dados, setDados] = React.useState(null)
 
@@ -17,6 +20,7 @@ const App = () => {
       )
     const json = await response.json()
     setDados(json)
+
     setCarregando(false)
 
     console.info(json)
@@ -30,7 +34,7 @@ const App = () => {
 
       {carregando && <p>Carregando...</p>}
 
-      {/* se carregando for falso e se dados existe, se for verdadeiro, mostrar produto. */}
+      {/* se carregando for falso e se dados existir, se for verdadeiro, mostrar produto. */}
       {!carregando && dados && <Produto dados={dados}/>}
     </div>
     )
