@@ -50,3 +50,4 @@ const Compras = () => {
 }
 
 // aula-600 finalizada
+// testando o commit
